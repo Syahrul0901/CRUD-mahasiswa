@@ -1,15 +1,15 @@
 GET http://localhost:3000/mahasiswa
 
 ###
-GET http://localhost:3000/mahasiswa/2
+GET http://localhost:3000/mahasiswa/3
 
 ###
 POST  http://localhost:3000/mahasiswa
 Content-Type: application/json
 
 {
-    "name": "udin",
-    "nim": 999
+    "name": "sueb",
+    "nim": 323
 }
 
 ###
