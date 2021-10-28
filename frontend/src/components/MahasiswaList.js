@@ -5,10 +5,10 @@ const MahasiswaList = () => {
   const [mahasiswa, setMahasiswa] = useState([]);
 
   useEffect(() => {
-    getMahasisiswa();
+    getMahasiswa();
   }, []);
 
-  const getMahasisiswa = async () => {
+  const getMahasiswa = async () => {
     const response = await axios.get('http://localhost:3000/mahasiswa');
     console.log(response.data);
   };
