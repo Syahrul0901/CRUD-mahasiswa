@@ -8,8 +8,8 @@ POST  http://localhost:3000/mahasiswa
 Content-Type: application/json
 
 {
-    "name": "sueb",
-    "nim": 323
+    "name": "jumari",
+    "nim": 999
 }
 
 ###
