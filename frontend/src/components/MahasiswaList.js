@@ -1,6 +1,18 @@
-import React from 'react';
+import { useState, useEffect } from 'react';
+import axios from 'axios';
 
-const Mahasiswalist = () => {
+const MahasiswaList = () => {
+  const [mahasiswa, setMahasiswa] = useState([]);
+
+  useEffect(() => {
+    getMahasisiswa();
+  }, []);
+
+  const getMahasisiswa = async () => {
+    const response = await axios.get('http://localhost:3000/mahasiswa');
+    console.log(response.data);
+  };
+
   return (
     <div>
       <table className="table is-striped is-fullwidth">
@@ -16,7 +28,7 @@ const Mahasiswalist = () => {
           <tr>
             <td>1</td>
             <td>Name</td>
-            <td>999</td>
+            <td>909</td>
             <td>
               <button className="button is-small is-info">Edit</button>
               <button className="button is-small is-danger">Delete</button>
@@ -28,4 +40,4 @@ const Mahasiswalist = () => {
   );
 };
 
-export default Mahasiswalist;
+export default MahasiswaList;
