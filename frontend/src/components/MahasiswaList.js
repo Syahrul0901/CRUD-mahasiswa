@@ -26,9 +26,9 @@ const MahasiswaList = () => {
         </thead>
         <tbody>
           <tr>
-            <td>1</td>
-            <td>Name</td>
-            <td>909</td>
+            <td>2</td>
+            <td>udin</td>
+            <td>999</td>
             <td>
               <button className="button is-small is-info">Edit</button>
               <button className="button is-small is-danger">Delete</button>
