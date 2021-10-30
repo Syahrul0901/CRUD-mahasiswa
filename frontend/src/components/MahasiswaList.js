@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
+import { Link } from 'react-router-dom';
 
 const MahasiswaList = () => {
   const [mahasiswa, setMahasiswa] = useState([]);
@@ -15,6 +16,9 @@ const MahasiswaList = () => {
 
   return (
     <div>
+      <Link to="/add" className="button is-primary mt-2">
+        Add New
+      </Link>
       <table className="table is-striped is-fullwidth">
         <thead>
           <tr>
