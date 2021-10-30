@@ -10,7 +10,7 @@ const MahasiswaList = () => {
   }, []);
 
   const getMahasiswa = async () => {
-    const response = await axios.get('http://localhost:5000/mahasiswa');
+    const response = await axios.get('http://localhost:3000/mahasiswa');
     setMahasiswa(response.data);
   };
 
