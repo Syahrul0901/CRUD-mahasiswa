@@ -10,7 +10,7 @@ const MahasiswaList = () => {
 
   const getMahasiswa = async () => {
     const response = await axios.get('http://localhost:5000/mahasiswa');
-    console.log(response.data);
+    setMahasiswa(response.data);
   };
 
   return (
@@ -25,15 +25,17 @@ const MahasiswaList = () => {
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <td>1</td>
-            <td>seub</td>
-            <td>987</td>
-            <td>
-              <button className="button is-small is-info">Edit</button>
-              <button className="button is-small is-danger">Delete</button>
-            </td>
-          </tr>
+          {mahasiswa.map((mahasiswa, index) => (
+            <tr key={mahasiswa.id}>
+              <td>{index + 1}</td>
+              <td>{mahasiswa.name}</td>
+              <td>{mahasiswa.nim}</td>
+              <td>
+                <button className="button is-small is-info">Edit</button>
+                <button className="button is-small is-danger">Delete</button>
+              </td>
+            </tr>
+          ))}
         </tbody>
       </table>
     </div>
