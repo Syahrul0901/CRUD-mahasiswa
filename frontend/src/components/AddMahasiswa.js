@@ -9,7 +9,7 @@ const AddMahasiswa = () => {
 
   const saveMahasiswa = async (e) => {
     e.preventDefaulth();
-    await axios.post('http://localhost:3000/mahasiswa', {
+    await axios.post('http://localhost:5000/mahasiswa', {
       name: name,
       nim: nim,
     });
